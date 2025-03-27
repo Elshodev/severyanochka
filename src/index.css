@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* @import url(https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;800;900&display=swap); */
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  max-width: 1230px;
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: 15px;
+}
+
+body {
+  background-color: #FBF8EC;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-bottom {
+  background-image: url('./assets/imgs/headerBottomBg.png');
+}
+
+#absolute-categ {
+  transform: translateY(-10px);
+}
+
+header:has(#categ-btn:hover) #absolute-categ {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+header:has(#absolute-categ:hover) #absolute-categ {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#categ-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 82.81%);
+}
+
+#categ-card:hover::after {
+  background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%);
+  height: 80%;
+}
+
+.text-hidden-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-hidden-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
